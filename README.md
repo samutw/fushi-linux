@@ -28,6 +28,34 @@ command. Your library and settings are kept (`~/.var/app/app.fushi.reader`).
 **To remove:** `flatpak uninstall --user app.fushi.reader`
 (add `--delete-data` to remove your data too).
 
+## Steam Deck
+
+**Install Fushi on the Deck:**
+
+1. Switch to Desktop Mode: **STEAM** button → **Power** → **Switch to Desktop**.
+2. Download the `.flatpak` from [Releases](../../releases) with the browser.
+3. Open **Konsole** and run (Flatpak is already part of SteamOS):
+   ```bash
+   cd ~/Downloads
+   flatpak install --user fushi-<version>-<commit>-x86_64.flatpak
+   ```
+4. To use it in Game Mode, add it to Steam: open **Steam** in Desktop Mode →
+   **Games** → **Add a Non-Steam Game to My Library…** → tick **Fushi** → **Add Selected Programs**.
+5. Return to Game Mode (desktop icon **Return to Gaming Mode**). Fushi is in your library
+   under **Non-Steam**.
+
+Tips: in Fushi's Steam Input settings, the **Gamepad with Mouse Trackpad** layout works
+well. Your books, videos and music on an SD card or USB drive (`/run/media`) are visible to
+Fushi.
+
+**Look up words in your games: Fushi Lens.** If you play Japanese games on the Deck,
+install the [**Fushi Lens**](https://github.com/samutw/fushi-lens) plugin for
+[Decky Loader](https://decky.xyz). Press a back button in any game to read the text on
+screen, look up a word, and mine it to Anki, without leaving the game. It pairs with Fushi
+on your PC (or a `fushi_server`) on the same network, which does the text recognition.
+The [Fushi Lens guide](https://github.com/samutw/fushi-lens#readme) covers installing
+Decky Loader, the plugin and pairing step by step.
+
 ## Limits
 
 - x86_64 only (no ARM).
